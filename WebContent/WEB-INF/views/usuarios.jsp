@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -58,18 +59,15 @@
 						</thead>
 						<tbody>
 						<c:forEach items="${empleados}" var="empleado">
-	<c:out value="${admin}"/>
-	<a href='<c:url value="/admin/${admin.idAd}/actualizar"/>'>Actualizar</a>
-	<a class="confirm" href='<c:url value="/admin/${admin.idAd}/delete" />'>Eliminar</a>
-	<br/>
-</c:forEach>
+
 							<tr>
 								<td><c:out value="${empleado.id_empleado}"/></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td><c:out value="${empleado.nombre}"/></td>
+								<td><c:out value="${empleado.apellido}"/></td>
+								<td><c:out value="${empleado.email}"/></td>
 							</tr>
 							
+						</c:forEach>
 
 						</tbody>
 					</table>

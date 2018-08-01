@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.tgv.controller;
 
 import java.util.List;
@@ -18,12 +16,9 @@ import org.tgv.pojo.Empleado;
 
 import com.tgv.service.EmpleadoService;
 
-/**
- * @author jperedo
- *
- */
+
 @Controller
-public class AdminController {
+public class UserController {
 	
 //	@Autowired
 //	private AdminService adminService;
