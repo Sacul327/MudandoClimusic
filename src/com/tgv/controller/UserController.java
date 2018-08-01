@@ -51,6 +51,19 @@ public class UserController {
 		return "usuarios";
 	}
 	
+	@RequestMapping(value="/empleado/save",method=RequestMethod.POST)
+	public String handlAdmin(@ModelAttribute("empleado") Empleado empleadoForm, 
+			Model model, RedirectAttributes ra) {
+		
+		empleadoService.saveOrUpdate(empleadoForm);
+		ra.addFlashAttribute("resultado", "Cambios realizados con exito");
+		
+		
+		return "redirect:/admin";
+	}
+	
+	
+	
 //	@RequestMapping(value="/admin/save",method=RequestMethod.POST)
 //	public String handlAdmin(@ModelAttribute("admin") Admin adminForm, 
 //			Model model, RedirectAttributes ra) {

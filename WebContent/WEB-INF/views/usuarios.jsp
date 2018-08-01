@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -87,43 +88,42 @@
 		</div>
 		<h3>Agregar usuario</h3>
 		<div class="container-fluid bg-3">
-			<form class="form-horizontal" action="ServletUsuarios" method="post">
+		<sf:form action="${pageContext.request.contextPath}/empleado/save" method="post" commandName="empleado">
+			<c:if test="${empleado.id_empleado ne 0 }">
+			<sf:input path="id_empleado" type="hidden"/>
+			</c:if>
+		<div class="form-row col-md-6">
+					<label for="inputNombre">Nombre:</label> <sf:input path="nombre"/>
+				</div>
+				<div class="form-row col-md-6">
+					<label for="inputApellido">Apellido :</label> <sf:input path="apellido"/>
+				</div>
+				<div class="form-row col-md-6">
+					<label for="inputDocumento">Documento :</label> <sf:input path="documento"/>
+				</div>
+				<div class="form-row col-md-6">
+					<label for="inputEmail">Email :</label> <sf:input path="email"/>
+				</div>
+				<div class="form-row col-md-6">
+					<label for="inputContrasenia">Contraseña :</label> <sf:input path="password"/>
+				</div>
+				<div class="form-row col-md-6">
+					<label for="inputPrivilegio">Privilegio :</label> <sf:input path="permiso"/>
+				</div>
+<%-- 		<c:if test="${admin.idAd ne 0 }"> --%>
+<%-- 			<sf:input path="idAd" type="hidden"/> --%>
+<%-- 			<sf:input path="fechaCreacion" type="hidden"/> --%>
+<%-- 		</c:if> --%>
+	
+			<input type="submit" value="Guardar Cambios"/>
+		
+	
+		</sf:form>
+<!-- 				<button id="adduser" class="btn btn-lg btn-info " type="submit">Agregar -->
+<!-- 					usuario</button> -->
+			
 
-				<div class="form-row col-md-6">
-					<label for="inputNombre">Nombre:</label> <input name="nombre"
-						type="text" class="form-control" id="inputNombre"
-						placeholder="nombre...">
-				</div>
-				<div class="form-row col-md-6">
-					<label for="inputApellido">Apellido :</label> <input
-						name="apellido" type="text" class="form-control"
-						id="inputApellido" placeholder="Apellido...">
-				</div>
-				<div class="form-row col-md-6">
-					<label for="inputDocumento">Documento :</label> <input type="text"
-						name="documento" class="form-control" id="inputDocumento"
-						placeholder="N° Documento...">
-				</div>
-				<div class="form-row col-md-6">
-					<label for="inputEmail">Email :</label> <input type="email"
-						name="email" class="form-control" id="inputEmail"
-						placeholder="Email...">
-				</div>
-				<div class="form-row col-md-6">
-					<label for="inputContrasenia">Contraseña :</label> <input
-						type="password" name="contrasena" class="form-control"
-						id="inputContrasenia" placeholder="Contraseña...">
-				</div>
-				<div class="form-row col-md-6">
-					<label for="inputPrivilegio">Privilegio :</label> <input
-						type="text" name="privilegio" class="form-control"
-						id="inputPrivilegio" placeholder="Ingrese: admin O vendedor">
-				</div>
-				<button id="adduser" class="btn btn-lg btn-info " type="submit">Agregar
-					usuario</button>
-			</form>
-
-		</div>
+	</div>
 
 
 </body>

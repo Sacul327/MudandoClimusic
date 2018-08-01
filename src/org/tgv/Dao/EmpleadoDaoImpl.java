@@ -76,7 +76,15 @@ public class EmpleadoDaoImpl implements EmpleadoDao {
 		return existe;
 	}
 	
+	public void actualizar(Empleado empleado) {
+		// TODO Auto-generated method stub
+		getSession().update(empleado);
+	}
 	
+	public void save(Empleado empleado) {
+		// TODO Auto-generated method stub
+		getSession().save(empleado);
+	}
 	
 //	public void buscarXEmail(String email) {
 //		

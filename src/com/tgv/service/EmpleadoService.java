@@ -1,5 +1,7 @@
 package com.tgv.service;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +31,21 @@ public class EmpleadoService {
 	public boolean comprueboAdmin(String user) {
 		return empleadoDao.comprueboAdmin(user);
 	}
+	
+	public void saveOrUpdate(Empleado empleado) {
+		// TODO Auto-generated method stub
+		
+		if (empleado.getId_empleado() == 0) {
+			// insertamos los datos
+			 empleadoDao.save(empleado);
+		}
+		else {
+			 empleadoDao.actualizar(empleado);
+		}
+		
+	}
+	
+	
 //	
 //	public void buscarXEmail(String email) {
 //		empleadoDao.buscarXEmail(email);
