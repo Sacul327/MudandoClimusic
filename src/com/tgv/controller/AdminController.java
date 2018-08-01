@@ -46,13 +46,14 @@ public class AdminController {
 //		return "administrador";
 //	}
 	
+	@RequestMapping("/usuarios")
 	public String Empleados(Model model, @ModelAttribute("resultado") String resultado) {
 		List<Empleado> empleados = empleadoService.buscarTodos();
 		Empleado empleado = new Empleado();
-		model.addAttribute("admin", empleado);
+		model.addAttribute("empleado", empleado);
 		model.addAttribute("resultado", resultado);
-		model.addAttribute("admins", empleados);
-		return "administrador";
+		model.addAttribute("empleados", empleados);
+		return "usuarios";
 	}
 	
 //	@RequestMapping(value="/admin/save",method=RequestMethod.POST)

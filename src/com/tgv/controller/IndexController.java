@@ -65,10 +65,10 @@ public class IndexController {
 	public String showLocation() {
 		return "location";
 	}
-	@RequestMapping("/usuarios")
-	public String showUsuarios() {
-		return "usuarios";
-	}
+//	@RequestMapping("/usuarios")
+//	public String showUsuarios() {
+//		return "usuarios";
+//	}
 	@RequestMapping("/springLog")
 	public String ShowSpringlog(Model model) {
 		Empleado empleado= new Empleado();
