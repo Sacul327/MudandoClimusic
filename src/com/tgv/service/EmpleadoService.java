@@ -17,5 +17,21 @@ public class EmpleadoService {
 	public List<Empleado> buscarTodos() {
 		return empleadoDao.buscarTodos();
 	}
+//	public boolean listaEmpleados(String email, String password) {
+//		return empleadoDao.listaEmpleados(email, password);
+//	}
+	
+	public boolean datosCorrectos(String email, String pass) {
+		return empleadoDao.datosCorrectos(email, pass);
+	}
+	
+	
+	public boolean comprueboAdmin(String user) {
+		return empleadoDao.comprueboAdmin(user);
+	}
+//	
+//	public void buscarXEmail(String email) {
+//		empleadoDao.buscarXEmail(email);
+//	}
 
 }
