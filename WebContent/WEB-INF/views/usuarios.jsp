@@ -93,30 +93,30 @@
 			<sf:input path="id_empleado" type="hidden"/>
 			</c:if>
 		<div class="form-row col-md-6">
-					<label for="inputNombre">Nombre:</label> <sf:input path="nombre"/>
+					<label for="inputNombre">Nombre:</label> <sf:input cssClass="form-control" path="nombre"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label for="inputApellido">Apellido :</label> <sf:input path="apellido"/>
+					<label for="inputApellido">Apellido :</label> <sf:input cssClass="form-control" path="apellido"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label for="inputDocumento">Documento :</label> <sf:input path="documento"/>
+					<label for="inputDocumento">Documento :</label> <sf:input cssClass="form-control" path="documento"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label for="inputEmail">Email :</label> <sf:input path="email"/>
+					<label for="inputEmail">Email :</label> <sf:input cssClass="form-control" path="email"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label for="inputContrasenia">Contraseña :</label> <sf:input path="password"/>
+					<label for="inputContrasenia">Contraseña :</label> <sf:input cssClass="form-control" path="password"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label for="inputPrivilegio">Privilegio :</label> <sf:input path="permiso"/>
+					<label for="inputPrivilegio">Privilegio :</label> <sf:input cssClass="form-control" path="permiso"/>
 				</div>
 <%-- 		<c:if test="${admin.idAd ne 0 }"> --%>
 <%-- 			<sf:input path="idAd" type="hidden"/> --%>
 <%-- 			<sf:input path="fechaCreacion" type="hidden"/> --%>
 <%-- 		</c:if> --%>
-	
-			<input type="submit" value="Guardar Cambios"/>
-		
+			<div style="padding-top: 200px;">
+			<button id="adduser" class="btn btn-lg btn-info " type="submit">Agregar	usuario</button>
+			</div>
 	
 		</sf:form>
 <!-- 				<button id="adduser" class="btn btn-lg btn-info " type="submit">Agregar -->

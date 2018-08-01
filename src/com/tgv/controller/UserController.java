@@ -59,7 +59,7 @@ public class UserController {
 		ra.addFlashAttribute("resultado", "Cambios realizados con exito");
 		
 		
-		return "redirect:/admin";
+		return "redirect:/usuarios";
 	}
 	
 	
