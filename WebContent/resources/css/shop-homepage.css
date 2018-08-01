@@ -1,0 +1,81 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template-overviews/shop-homepage)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+ .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+     
+      background-color: #fff;
+      margin-bottom: 40px;
+      background: url(images/tienda2.jpg)no-repeat center center ;
+      height: 350px;
+      width: 1263px;
+      background-color: #262626;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    #img{
+    	position: relative;
+    }
+    .foto{
+    	height: 239px;
+    }
+    .imagen{
+    	position: absolute;
+        top: 50%;
+        left: 10%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+    .navbar-nav{
+    color : #007bff;
+    }
+    .navbar-dark{
+    border: 2px solid;
+    border-color: white;
+    border-bottom-color: darkgrey;
+    color : #007bff;
+    }
+    
+    .nav-link{
+    color : #007bff;
+    }
+    .navbar-dark .navbar-nav .nav-link{
+    color : #007bff;
+    }
+    .xx{
+    border: 2px solid;
+    border-color: white;
+    border-bottom-color: darkgrey;
+    color: #007bff;
+    background-color: #ffffff;
+    }
+    
+    .sp{
+    margin-top: 30px;
+    }
+    .res{
+    	height: 700px;
+    	width: 400px;
+    }
+    <!--height: 252.98px;
+    	width: 144.56px;-->
