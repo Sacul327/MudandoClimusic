@@ -13,8 +13,9 @@
 <body>
 	<div class="container">
       <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <img class="d-block mx-auto mb-4" src='<c:url value="/resources/images/ClimusiclogoCortado.jpg"/>' alt="" width="72" height="72">
         <h2>Agregar usuarios</h2>
+        
       </div>
 
       <div class="row">
