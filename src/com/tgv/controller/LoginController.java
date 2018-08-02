@@ -27,25 +27,7 @@ public class LoginController {
 	private EmpleadoService empleadoService;
 	
 	
-	@RequestMapping("/PantallaVentasAdmin")
-	public String showPantallaVentasAdm() {
-		return "pantalla_ventas_admin";
-	}
-	@RequestMapping("/pantalla_prueba")
-	public String showPantallaprueba(){
-		return "pantalla_ventas_prueba";
-	}
 	
-//	@RequestMapping("/mostrarProductos")
-//	public String mostrarListaprod(Model model){
-//		System.out.println("asddddddddddddddddddddddddddddDDDDDDDDDDDDDDDDDDd");
-//		List<Productos> productos= pantVentasService.buscarTodosPro();
-//		model.addAttribute("productos", productos);
-//		System.out.println("SOY LA LISTA MODELO!!!!!!!!"+model+"   SOY LA LISTA MODELO!!!!!!!!");
-//		
-//		System.out.println("SOY LISTA PRDUCTOS!!!!!!!!!!!!!"+productos+ "SOY SHOOOOOOOasdasdasd!!!");
-//		return "/pantalla_ventas_prueba";
-//	}
 	
 	@RequestMapping(value="/empleado/ingreso",method=RequestMethod.POST)
 	public String handlAdmin(@ModelAttribute("empleado") Empleado empleadoForm, Model model/*,RedirectAttributes ra

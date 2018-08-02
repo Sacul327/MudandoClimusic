@@ -13,7 +13,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link href="css/usuarioscss.css" rel="stylesheet">
+<link href=<c:url value="/resources/css/usuarioscss.css" /> rel="stylesheet">
 
 </head>
 <body>
@@ -31,9 +31,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="pantalla_ventas_admin.jsp">Ventas</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="usuarios.jsp">Administrar Usuarios</a>
+					<li class="nav-item"><a class="nav-link" href='<c:url value="/pantallaVentasAdmin"/>'>Volver a Ventas</a>
 					</li>
 				</ul>
 				

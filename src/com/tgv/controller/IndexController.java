@@ -76,6 +76,15 @@ public class IndexController {
 		return "loginSpring";
 	}
 	
+	@RequestMapping("/PantallaVentasAdmin")
+	public String showPantallaVentasAdm() {
+		return "pantalla_ventas_admin";
+	}
+	@RequestMapping("/pantalla_prueba")
+	public String showPantallaprueba(){
+		return "pantalla_ventas_prueba";
+	}
+	
 	
 	
 }
