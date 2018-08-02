@@ -59,7 +59,8 @@ public class UserController {
 		ra.addFlashAttribute("resultado", "Cambios realizados con exito");
 		
 		
-		return "redirect:/usuarios";
+//		return "redirect:/usuarios";
+		return "adduser";
 	}
 	
 	@RequestMapping(value="list/{idAd}/borrar")
@@ -70,6 +71,15 @@ public class UserController {
 		return "redirect:/usuarios";
 	}
 	
+	@RequestMapping("/adduser")
+	public String showAddUser(Model model,@ModelAttribute("resultado") String resultado) {
+		List<Empleado> empleados = empleadoService.buscarTodos();
+		Empleado empleado = new Empleado();
+		model.addAttribute("empleado", empleado);
+		model.addAttribute("resultado", resultado);
+		model.addAttribute("empleados", empleados);
+		return "adduser";
+	}
 	
 //	@RequestMapping(value="/admin/save",method=RequestMethod.POST)
 //	public String handlAdmin(@ModelAttribute("admin") Admin adminForm, 
