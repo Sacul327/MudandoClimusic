@@ -75,16 +75,16 @@
 						</tbody>
 					</table>
 				</form>
-				<form class="form-signin" action="ServletUsuariosQuitar"
-					method="post">
-					<input name="numEmpleado" type="text" class="form-control"
-						placeholder="N° de empleado" aria-label=""
-						aria-describedby="basic-addon1">
-					<div class="input-group-prepend">
-						<button id="botonquitar" class="btn btn-primary btn-block"
-							type="submit">Quitar usuario</button>
-					</div>
-				</form>
+<!-- 				<form class="form-signin" action="ServletUsuariosQuitar" -->
+<!-- 					method="post"> -->
+<!-- 					<input name="numEmpleado" type="text" class="form-control" -->
+<!-- 						placeholder="N° de empleado" aria-label="" -->
+<!-- 						aria-describedby="basic-addon1"> -->
+<!-- 					<div class="input-group-prepend"> -->
+<!-- 						<button id="botonquitar" class="btn btn-primary btn-block" -->
+<!-- 							type="submit">Quitar usuario</button> -->
+<!-- 					</div> -->
+<!-- 				</form> -->
 
 			</div>
 		</div>
@@ -104,10 +104,10 @@
 					<label>Documento :</label> <sf:input cssClass="form-control" path="documento"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label>Email :</label> <sf:input cssClass="form-control" path="email"/>
+					<label>Email :</label> <sf:input type="email" cssClass="form-control" path="email"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label>Contraseña :</label> <sf:input cssClass="form-control" path="password"/>
+					<label>Contraseña :</label> <sf:password cssClass="form-control" path="password"/>
 				</div>
 				<div class="form-row col-md-6">
 					<label>Privilegio :</label> <sf:input cssClass="form-control" path="permiso" />
