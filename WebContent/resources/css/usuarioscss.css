@@ -30,3 +30,7 @@ footer {
 .navbar-nav>li>a {
     line-height: 50px;
     padding-left: 13px;
+}
+.centrotexto{
+	text-align: center !important;
+}

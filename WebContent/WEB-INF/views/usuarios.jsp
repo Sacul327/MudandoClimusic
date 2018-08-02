@@ -50,10 +50,12 @@
 					<table class="table table-striped " id="tabla">
 						<thead>
 							<tr>
-								<th>Id</th>
-								<th>Nombre</th>
-								<th>Apellido</th>
-								<th>Documento</th>
+								<th class="centrotexto">Id</th>
+								<th class="centrotexto">Nombre</th>
+								<th class="centrotexto">Apellido</th>
+								<th class="centrotexto">Documento</th>
+								<th class="centrotexto">Actualizar</th>
+								<th class="centrotexto">Eliminar</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -64,6 +66,8 @@
 								<td><c:out value="${empleado.nombre}"/></td>
 								<td><c:out value="${empleado.apellido}"/></td>
 								<td><c:out value="${empleado.email}"/></td>
+								<td><a href="<c:url value='list/${empleado.id_empleado}/actualizar'/>">Actualizar</a></td>
+								<td><a href="<c:url value='list/${empleado.id_empleado}/borrar'/>">Eliminar</a> </td>
 							</tr>
 							
 						</c:forEach>
@@ -91,22 +95,22 @@
 			<sf:input path="id_empleado" type="hidden"/>
 			</c:if>
 		<div class="form-row col-md-6">
-					<label for="inputNombre">Nombre:</label> <sf:input cssClass="form-control" path="nombre"/>
+					<label>Nombre:</label> <sf:input cssClass="form-control" path="nombre"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label for="inputApellido">Apellido :</label> <sf:input cssClass="form-control" path="apellido"/>
+					<label>Apellido :</label> <sf:input cssClass="form-control" path="apellido"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label for="inputDocumento">Documento :</label> <sf:input cssClass="form-control" path="documento"/>
+					<label>Documento :</label> <sf:input cssClass="form-control" path="documento"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label for="inputEmail">Email :</label> <sf:input cssClass="form-control" path="email"/>
+					<label>Email :</label> <sf:input cssClass="form-control" path="email"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label for="inputContrasenia">Contraseña :</label> <sf:input cssClass="form-control" path="password"/>
+					<label>Contraseña :</label> <sf:input cssClass="form-control" path="password"/>
 				</div>
 				<div class="form-row col-md-6">
-					<label for="inputPrivilegio">Privilegio :</label> <sf:input cssClass="form-control" path="permiso"/>
+					<label>Privilegio :</label> <sf:input cssClass="form-control" path="permiso" />
 				</div>
 <%-- 		<c:if test="${admin.idAd ne 0 }"> --%>
 <%-- 			<sf:input path="idAd" type="hidden"/> --%>

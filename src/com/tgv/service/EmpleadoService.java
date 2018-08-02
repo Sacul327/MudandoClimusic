@@ -44,8 +44,14 @@ public class EmpleadoService {
 		}
 		
 	}
+	public Empleado buscarXId(int id){
+		return empleadoDao.buscarXId(id);
+	}
 	
-	
+	public void delete(int idAd) {
+		Empleado empleado = empleadoDao.buscarXId(idAd);
+		empleadoDao.borrar(empleado);
+	}
 //	
 //	public void buscarXEmail(String email) {
 //		empleadoDao.buscarXEmail(email);

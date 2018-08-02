@@ -62,6 +62,13 @@ public class UserController {
 		return "redirect:/usuarios";
 	}
 	
+	@RequestMapping(value="list/{idAd}/borrar")
+	public String borrar(Model model,@PathVariable("idAd") int idAd){
+		Empleado empleado =empleadoService.buscarXId(idAd);
+		model.addAttribute("empleado", empleado);
+		empleadoService.delete(idAd);
+		return "redirect:/usuarios";
+	}
 	
 	
 //	@RequestMapping(value="/admin/save",method=RequestMethod.POST)

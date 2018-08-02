@@ -12,9 +12,10 @@ public interface EmpleadoDao {
 	public Empleado buscoUsuario(String email);
 	public boolean comprueboAdmin(String email);
 	public boolean datosCorrectos(String email, String pass);
-//	public Empleado buscarXId(int id);
+	
+	public Empleado buscarXId(int id);
 //	public List<Empleado> buscarXNombre(String nombre);
 	public void actualizar(Empleado empleado);
-//	public void borrar(Empleado empleado);
+	public void borrar(Empleado empleado);
 
 }
