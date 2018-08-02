@@ -33,9 +33,9 @@
       <a class="navbar-brand" href='<c:url value="/"/>'><img src='<c:url value="/resources/images/ClimusiclogoCortado.jpg"/>' class="img-responsive pos" style="width: 100%" alt="Image"></a>
       <h3 class="h6 mb-3 font-weight-normal">Please sign in</h3>
       <label for="inputEmail" class="sr-only">Email address</label>
-      <sf:input cssClass="form-control" path="email"/>
+      <sf:input cssClass="form-control mb-2" path="email"/>
       <label for="inputPassword" class="sr-only">Password</label>
-      <sf:input cssClass="form-control" path="password"/>
+      <sf:input cssClass="form-control mb-2" path="password"/>
       <button class="btn btn-lg btn-info btn-block bg-red" type="submit">Sign in</button>
       
     </sf:form>

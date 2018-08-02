@@ -6,14 +6,14 @@
 <title>Ventas</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="<c:url value="/resources/css/bootstrap.min.css"/>">
 
 <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
 <script src="<c:url value="/resources/js/jquery.min.js"/>"></script>
 <link href="<c:url value="/resources/css/pantalladVentas.css" />" rel="stylesheet">
 </head>
 <body>
-	NAVBAR
+<!-- 	NAVBAR -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a
 		class="navbar-brand" href='<c:url value="/"/>'><h2>Climusic</h2></a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -25,7 +25,7 @@
 	<div class="collapse navbar-collapse" id="navbarColor01">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item disabled"><a class="nav-link" href='<c:url value="/pantallaVentasAdmin"/>'>ventas</a></li>
-			<li class="nav-item"><a class="nav-link" href='<c:url value="/Productos"/>'>Administrar
+			<li class="nav-item"><a class="nav-link" href='<c:url value="/Usuarios"/>'>Administrar
 					Usuarios</a></li>
 		</ul>
 	</div>
@@ -49,7 +49,7 @@
 						</div>
 					</div>
 					</br>
-					Checkbox
+<!-- 					Checkbox -->
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
 							<div class="input-group-text">
@@ -119,17 +119,18 @@
 								</tr>
 							</thead>
 							<tbody>
-								
+								<c:forEach items="${productos}" var="producto">
 								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td><c:out value="${producto.id_instrumento}"/></td>
+									<td><c:out value="${producto.marca}"/></td>
+									<td><c:out value="${producto.modelo}"/></td>
+									<td><c:out value="${producto.precio}"/></td>
+									<td><c:out value="${producto.stock}"/></td>
+									<td><c:out value="${producto.color}"/></td>
+									<td><c:out value="${producto.tipo}"/></td>
+									<td><c:out value="${producto.tipo_detalle}"/></td>
 								</tr>
+								</c:forEach>
 								</tbody>
 						</table>
 					</form>
@@ -161,14 +162,7 @@
 								class="card-link">Another link</a>
 						</div>
 					</div>
-					<div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Blog..">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div>
+					
 				</div>
 			</div>
 		</div>
