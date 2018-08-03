@@ -31,10 +31,6 @@
                 <h6 class="my-0"><c:out value="${empleado.nombre}"/> <c:out value="${empleado.apellido}"/></h6>
                 <small class="text-muted"><c:out value="${empleado.email}"/></small>
               </div>
-              <div class="col-md-4">
-              <small><a href="<c:url value='list/${empleado.id_empleado}/actualizar'/>">Actualizar</a></small>
-              <small><a href="<c:url value='list/${empleado.id_empleado}/borraradd'/>">Eliminar</a></small>
-              </div>
             </li>
 		  </c:forEach>
           </ul>
@@ -103,7 +99,7 @@
               <span class="text-muted">Los usuarios con privilegio 1 podran acceder a las configuraciones de usuarios (privilegio 2 solo es capaz de realizar ventas).</span>
 <!--             </div> -->
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit" href='<c:url value="/adduser"/>'>Agregar usuario</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
           </sf:form>
         </div>
       </div>

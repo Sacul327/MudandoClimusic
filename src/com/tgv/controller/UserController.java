@@ -20,17 +20,26 @@ import com.tgv.service.EmpleadoService;
 @Controller
 public class UserController {
 	
-
+//	@Autowired
+//	private AdminService adminService;
 	
 	@Autowired
 	private EmpleadoService empleadoService;
 
+//	@RequestMapping("/admin")
 	/*
 	 * Model es una interface que usaremos para poder ingresar
 	 * parametros, es valido solo para este metodo, no podremos enviar estos 
 	 * a otro metodo, por ejemplo about
 	 */
-
+//	public String Administrador(Model model, @ModelAttribute("resultado") String resultado) {
+//		List<Admin> admins = adminService.buscarTodos();
+//		Admin admin = new Admin();
+//		model.addAttribute("admin", admin);
+//		model.addAttribute("resultado", resultado);
+//		model.addAttribute("admins", admins);
+//		return "administrador";
+//	}
 	
 	@RequestMapping("/usuarios")
 	public String Empleados(Model model, @ModelAttribute("resultado") String resultado) {
@@ -50,7 +59,8 @@ public class UserController {
 		ra.addFlashAttribute("resultado", "Cambios realizados con exito");
 		
 		
-		return "redirect:/adduser";
+//		return "redirect:/usuarios";
+		return "adduser";
 	}
 	
 	@RequestMapping(value="list/{idAd}/borrar")
@@ -59,13 +69,6 @@ public class UserController {
 		model.addAttribute("empleado", empleado);
 		empleadoService.delete(idAd);
 		return "redirect:/usuarios";
-	}
-	@RequestMapping(value="list/{idAd}/borraradd")
-	public String borraradd(Model model,@PathVariable("idAd") int idAd){
-		Empleado empleado =empleadoService.buscarXId(idAd);
-		model.addAttribute("empleado", empleado);
-		empleadoService.delete(idAd);
-		return "redirect:/adduser";
 	}
 	
 	@RequestMapping("/adduser")
@@ -78,15 +81,35 @@ public class UserController {
 		return "adduser";
 	}
 	
-	@RequestMapping(value="list/{idAd}/actualizar")
-	public String mostrarActualizar(Model model, @PathVariable("idAd") int id) {
-		
-		Empleado empleado = empleadoService.buscarXId(id);
-		
-		model.addAttribute("empleado", empleado);
-		//System.out.println(model.);
-		return "adduser";
-	}
-
+//	@RequestMapping(value="/admin/save",method=RequestMethod.POST)
+//	public String handlAdmin(@ModelAttribute("admin") Admin adminForm, 
+//			Model model, RedirectAttributes ra) {
+//		
+//		adminService.saveOrUpdate(adminForm);
+//		ra.addFlashAttribute("resultado", "Cambios realizados con éxito");
+//		
+//		
+//		return "redirect:/admin";
+//	}
+	
+	// /admin/${admin.idAd}/actualizar
+//	@RequestMapping(value="/admin/{idAd}/actualizar")
+//	public String mostrarActualizar(Model model, @PathVariable("idAd") int id) {
+//		
+//		Admin admin = adminService.buscarXId(id);
+//		
+//		model.addAttribute("admin", admin);
+//		//System.out.println(model.);
+//		return "administrador";
+//	}
+//	
+//	@RequestMapping("/admin/{idAd}/delete")
+//	public String delete(@PathVariable("idAd") int idAd, RedirectAttributes ra) {
+//		
+//		adminService.delete(idAd);
+//		ra.addFlashAttribute("resultado", "Cambios realizados con éxito");
+//
+//		return "redirect:/admin";
+//	}
 	
 }
