@@ -13,7 +13,8 @@
 <body>
 	<div class="container">
       <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src='<c:url value="/resources/images/ClimusiclogoCortado.jpg"/>' alt="" width="72" height="72">
+      	<h1>Climusic</h1>
+<%--         <img class="d-block mx-auto mb-4" src='<c:url value="/resources/images/ClimusiclogoCortado.jpg"/>' alt="" width="72" height="72"> --%>
         <h2>Agregar usuarios</h2>
         
       </div>
@@ -83,7 +84,7 @@
             <hr class="mb-4">
             <h4 class="mb-3">Privilegio de usuario</h4>
             <div class="form-row col-md-6"> 
-					<label>Privilegio (Ingrese 1 o 2):</label> <sf:input cssClass="form-control" path="permiso" />
+					<label>Privilegio (Ingrese 1 o 2):</label> <sf:input cssClass="form-control" path="permiso" value="2" />
 				</div>
 <!--             <div class="d-block my-3"> -->
 <!--               <div class="custom-control custom-radio"> -->
@@ -95,7 +96,7 @@
 <!--                 <label class="custom-control-label" for="debit">2</label> -->
 <!--               </div> -->
 				</br>
-              <span class="text-muted">Los usuarios con privilegio 1 podran acceder a las configuraciones de usuarios(privilegio 2 solo es capaz de realizar ventas).</span>
+              <span class="text-muted">Los usuarios con privilegio 1 podran acceder a las configuraciones de usuarios (privilegio 2 solo es capaz de realizar ventas).</span>
 <!--             </div> -->
             <hr class="mb-4">
             <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
@@ -103,14 +104,14 @@
         </div>
       </div>
 
-      <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">© 2017-2018 Company Name</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
-      </footer>
+<!--       <footer class="my-5 pt-5 text-muted text-center text-small"> -->
+<!--         <p class="mb-1">© 2017-2018 Company Name</p> -->
+<!--         <ul class="list-inline"> -->
+<!--           <li class="list-inline-item"><a href="#">Privacy</a></li> -->
+<!--           <li class="list-inline-item"><a href="#">Terms</a></li> -->
+<!--           <li class="list-inline-item"><a href="#">Support</a></li> -->
+<!--         </ul> -->
+<!--       </footer> -->
     </div>
 	<script src='<c:url value="/resources/jquery/jquery.min.js"/>'></script>
     <script src='<c:url value="/resources/js/bootstrap.bundle.min.js"/>'></script>
