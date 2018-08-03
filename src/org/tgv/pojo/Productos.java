@@ -23,6 +23,7 @@ public class Productos {
 	private String tipo;
 	private String tipo_detalle;
 	private String color;
+	private String img;
 	
 	
 	

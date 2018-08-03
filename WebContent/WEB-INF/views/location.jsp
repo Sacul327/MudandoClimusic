@@ -54,9 +54,9 @@
     <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: -34.606339,  lng: -58.435743};
+        var uluru = {lat: -34.607899,  lng: -58.372554};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
+          zoom: 17,
           center: uluru
         });
         var marker = new google.maps.Marker({
@@ -80,7 +80,9 @@
     <footer class="py-5 bg-dark fixed-bottom">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Climusic 2018</p>
+        <img src='<c:url value="/resources/images/TGVlogo2.png"/>' class="img-responsive imagen" style="width:5%" alt="Image">
       </div>
+      
       <!-- /.container -->
     </footer>
 

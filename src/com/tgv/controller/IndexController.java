@@ -57,10 +57,7 @@ public class IndexController {
 	public String showBajos(){
 		return "bajos";
 	}
-	@RequestMapping("/guitarras")
-	public String showGuitarras() {
-		return "guitarras";
-	}
+	
 	@RequestMapping("/location")
 	public String showLocation() {
 		return "location";
