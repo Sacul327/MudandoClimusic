@@ -85,7 +85,7 @@
 <!-- 							type="submit">Quitar usuario</button> -->
 <!-- 					</div> -->
 <!-- 				</form> -->
-						<a class="btn btn-primary btn-block" href='<c:url value="/adduser"/>'>agregar usuario</a>
+						<a class="btn btn-primary btn-block">agregar usuario</a>
 			</div>
 		</div>
 <!-- 		<h3>Agregar usuario</h3> -->
