@@ -20,19 +20,35 @@ public class productosController {
 	private ProductosService productosService;
 	
 	
-	@RequestMapping("/guitar")
-	public String Empleados(Model model, @ModelAttribute("resultado") String resultado) {
-		
-		List<Productos> listaFiltrada = new ArrayList();
-		List<Productos> productos = productosService.buscarTodos();
-		for(Productos prod: productos) {
-			if(prod.getTipo().equals("guitar")) {
-				listaFiltrada.add(prod);
-			}
-		}
-		System.out.println(listaFiltrada);
+//	@RequestMapping("/guitarras")
+//	public String showGuitarras(Model model, @ModelAttribute("resultado") String resultado) {
+//		
+//		List<Productos> listaFiltrada = new ArrayList();
+//		List<Productos> productos = productosService.buscarTodos();
+//		for(Productos prod: productos) {
+//			System.out.println(prod);
+//			if(prod.getTipo().equals("guitar")) {
+//				
+//			}
+////			if(prod.getTipo().equals("guitar")) {
+////				System.out.println(prod);
+////			}
+//		}
+//		
+//		System.out.println("SOY LISTA FILTRADA************************************************"+listaFiltrada);
+//		
+//		Productos producto = new Productos();
+//		model.addAttribute("producto", producto);
+//		model.addAttribute("resultado", resultado);
+//		model.addAttribute("listaFiltrada", listaFiltrada);
+//		return "guitarras";
+//	}
+	
+	@RequestMapping("/guitarras")
+	public String showAddUser(Model model, @ModelAttribute("resultado") String resultado) {
 		
 		Productos producto = new Productos();
+		List<Productos> productos = productosService.buscarGuitar();
 		model.addAttribute("producto", producto);
 		model.addAttribute("resultado", resultado);
 		model.addAttribute("productos", productos);

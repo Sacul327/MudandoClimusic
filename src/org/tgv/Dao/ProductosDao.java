@@ -11,4 +11,5 @@ public interface ProductosDao {
 	public List<Productos> buscarTodos();
 	public Productos buscoProducto(String producto);
 	public void actualizar(Productos productos);
+	public List<Productos> buscarGuitar();
 }

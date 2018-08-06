@@ -28,6 +28,12 @@ public class Productos {
 	
 	
 	
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
 	public int getProveedor_id() {
 		return proveedor_id;
 	}
@@ -82,26 +88,33 @@ public class Productos {
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
-	public Productos(String marca, String modelo, String tipo, String tipo_detalle, String color, int stock, int id_instrumento,
-			float precio, int proveedor_id) {
-		this.proveedor_id=proveedor_id;
-		this.stock= stock;
+	
+	
+	
+	public Productos(int id_instrumento, int stock, int proveedor_id, float precio, String marca, String modelo,
+			String tipo, String tipo_detalle, String color, String img) {
+		this.id_instrumento = id_instrumento;
+		this.stock = stock;
+		this.proveedor_id = proveedor_id;
+		this.precio = precio;
 		this.marca = marca;
 		this.modelo = modelo;
 		this.tipo = tipo;
 		this.tipo_detalle = tipo_detalle;
 		this.color = color;
-		this.id_instrumento = id_instrumento;
-		this.precio = precio;
+		this.img = img;
 	}
 	public Productos() {
 		
 	}
 	@Override
 	public String toString() {
-		return "Productos [marca=" + marca + ", modelo=" + modelo + ", tipo=" + tipo + ", tipo_detalle=" + tipo_detalle
-				+ ", color=" + color + ", id_instrumento=" + id_instrumento + ", precio=" + precio + "]";
+		return "Productos [id_instrumento=" + id_instrumento + ", stock=" + stock + ", proveedor_id=" + proveedor_id
+				+ ", precio=" + precio + ", marca=" + marca + ", modelo=" + modelo + ", tipo=" + tipo
+				+ ", tipo_detalle=" + tipo_detalle + ", color=" + color + ", img=" + img + "]";
 	}
+	
+	
 	
 	
 	

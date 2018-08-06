@@ -57,7 +57,7 @@
 
           <h1 class="my-4">Instrumentos</h1>
           <div class="list-group">
-            <a href='<c:url value="/guitar"/>' class="list-group-item">Guitarras</a>
+            <a href='<c:url value="/guitarras"/>' class="list-group-item">Guitarras</a>
             <a href='<c:url value="/bajos"/>' class="list-group-item">Bajos</a>
             <a href="#" class="list-group-item">Baterias</a>
             <a href="#" class="list-group-item">Teclados</a>

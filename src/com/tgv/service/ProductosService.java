@@ -19,5 +19,8 @@ public class ProductosService {
 		return productosDao.buscarTodos();
 	}
 	
+	public List<Productos> buscarGuitar(){
+		return productosDao.buscarGuitar();
+	}
 	
 }

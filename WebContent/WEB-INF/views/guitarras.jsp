@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,121 +75,33 @@
 			<div class="col-lg-9">
 
 				<div class="row sp">
-
+	
+				<c:forEach items="${productos}" var="productos">
 					<div class="col-lg-4 col-md-6 mb-4">
+					
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="images/guitar/ibanez rg370ahmz bmt.jpg" alt=""></a>
+								src='<c:out value="${productos.img}"/>' alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
-									<a href="#">Ibañez RG370</a>
+									<h4><c:out value="${productos.marca}"/> <c:out value="${productos.modelo}"/></h4>
 								</h4>
-								<h5>$24.99</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Amet numquam aspernatur!</p>
+<!-- 								<h5>$24.99</h5> -->
+<!-- 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur -->
+<!-- 									adipisicing elit. Amet numquam aspernatur!</p> -->
 							</div>
-							<div class="card-footer">
-								<small class="text-muted">&#9733; &#9733; &#9733;
-									&#9733; &#9734;</small>
-							</div>
+<!-- 							<div class="card-footer"> -->
+<!-- 								<small class="text-muted">&#9733; &#9733; &#9733; -->
+<!-- 									&#9733; &#9734;</small> -->
+<!-- 							</div> -->
 						</div>
+								
 					</div>
-
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card h-100">
-							<a href="#"><img class="card-img-top"
-								src="images/guitar/Danelectro-DC-59.jpg" alt=""></a>
-							<div class="card-body">
-								<h4 class="card-title">
-									<a href="#">Danelectro DC59</a>
-								</h4>
-								<h5>$24.99</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor
-									sit amet.</p>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">&#9733; &#9733; &#9733;
-									&#9733; &#9734;</small>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card h-100">
-							<a href="#"><img class="card-img-top"
-								src="images/guitar/Epiphone-Les-Paul-Custom-PRO.jpg" alt=""></a>
-							<div class="card-body">
-								<h4 class="card-title">
-									<a href="#">Epiphone Les Paul Custom Pro</a>
-								</h4>
-								<h5>$24.99</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Amet numquam aspernatur!</p>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">&#9733; &#9733; &#9733;
-									&#9733; &#9734;</small>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card h-100">
-							<a href="#"><img class="card-img-top"
-								src="images/guitar/bluesbird_burst ITB GUILD.jpg" alt=""></a>
-							<div class="card-body">
-								<h4 class="card-title">
-									<a href="#">Guild ITB Les Paul</a>
-								</h4>
-								<h5>$24.99</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Amet numquam aspernatur!</p>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">&#9733; &#9733; &#9733;
-									&#9733; &#9734;</small>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card h-100">
-							<a href="#"><img class="card-img-top"
-								src="images/guitar/washburnDD60TR.jpg" alt=""></a>
-							<div class="card-body">
-								<h4 class="card-title">
-									<a href="#">Washburn DD60TR</a>
-								</h4>
-								<h5>$24.99</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor
-									sit amet.</p>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">&#9733; &#9733; &#9733;
-									&#9733; &#9734;</small>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 mb-4">
-						<div class="card h-100">
-							<a href="#"><img class="card-img-top"
-								src="images/guitar/les-paul-guitar-drawing-52.jpg" alt=""></a>
-							<div class="card-body">
-								<h4 class="card-title">
-									<a href="#">Epiphone Les Paul JR</a>
-								</h4>
-								<h5>$24.99</h5>
-								<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Amet numquam aspernatur!</p>
-							</div>
-							
-						</div>
-					</div>
+			
+			</c:forEach>
 
 				</div>
+				
 				<!-- /.row -->
 
 			</div>
