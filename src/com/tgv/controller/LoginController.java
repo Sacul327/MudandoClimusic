@@ -39,13 +39,13 @@ public class LoginController {
 				if(empleadoService.comprueboAdmin(empleadoForm.getEmail())){
 					return "redirect:/usuarios";
 				}else {
-					return "mostrarProductos";
+					return "redirect:/springLogError";
 				}
 				
 			}else {
-				return "redirect:/";
+				return "redirect:/springLogError";
 			}
 		}
-		return null; //Redirect/: envia parametros a otro metodo
+		return "redirect:/springLogError"; //Redirect/: envia parametros a otro metodo
 	}
 }

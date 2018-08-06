@@ -68,6 +68,12 @@ public class IndexController {
 		model.addAttribute("empleado", empleado);
 		return "loginSpring";
 	}
+	@RequestMapping("/springLogError")
+	public String ShowSpringlogError(Model model) {
+		Empleado empleado= new Empleado();
+		model.addAttribute("empleado", empleado);
+		return "loginerror";
+	}
 	
 	
 //	@RequestMapping("/pantalla_prueba")

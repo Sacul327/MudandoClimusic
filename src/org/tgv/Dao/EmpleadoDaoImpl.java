@@ -58,10 +58,15 @@ public class EmpleadoDaoImpl implements EmpleadoDao {
 		Empleado emp = new Empleado();
 		boolean existe=false;
 		emp=buscoUsuario(email);
-		System.out.println("ESTOY EN DATOS CORRECTOS IMPRIMO TODO EL OBJETO"+emp);
-		if(emp.getEmail().equals(email) && emp.getPassword().equals(pass)) {
-        	existe = true;
-        }
+		if(emp==null) {
+			existe=false;
+		}else {
+			if(emp.getEmail().equals(email) && emp.getPassword().equals(pass)) {
+	        	existe = true;
+	        }else {
+	        	existe= false;
+	        }
+		}
 		return existe;
 	}
 	
