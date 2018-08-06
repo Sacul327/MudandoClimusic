@@ -39,7 +39,7 @@
 					</li>
 					<li class="nav-item"><a class="nav-link" href='<c:url value="/location"/>'>Encuentranos</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href='<c:url value="/login"/>'><span
+					<li class="nav-item"><a class="nav-link" href='<c:url value="/springLog"/>'><span
 							class="glyphicon glyphicon-user"></span> Log In</a></li>
 					<li class="nav-item"><a class="nav-link" href=""><span
 							class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
