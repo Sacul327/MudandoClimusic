@@ -53,10 +53,6 @@ public class IndexController {
 		return "pantalla_ventas";
 	}
 	
-	@RequestMapping("/bajos")
-	public String showBajos(){
-		return "bajos";
-	}
 	
 	@RequestMapping("/location")
 	public String showLocation() {

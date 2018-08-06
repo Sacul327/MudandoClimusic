@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Bajos - Climusic</title>
+<title>Guitarras - Climusic</title>
 
  <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
@@ -86,7 +86,7 @@
 								<h4 class="card-title">
 									<h4><c:out value="${productos.marca}"/> <c:out value="${productos.modelo}"/></h4>
 								</h4>
-<!-- 								<h5>$24.99</h5> -->
+								<h5>$<c:out value="${productos.precio}"/></h5>
 <!-- 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur -->
 <!-- 									adipisicing elit. Amet numquam aspernatur!</p> -->
 							</div>

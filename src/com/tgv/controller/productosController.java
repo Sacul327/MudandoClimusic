@@ -45,7 +45,7 @@ public class productosController {
 //	}
 	
 	@RequestMapping("/guitarras")
-	public String showAddUser(Model model, @ModelAttribute("resultado") String resultado) {
+	public String showGuitarras(Model model, @ModelAttribute("resultado") String resultado) {
 		
 		Productos producto = new Productos();
 		List<Productos> productos = productosService.buscarGuitar();
@@ -53,6 +53,16 @@ public class productosController {
 		model.addAttribute("resultado", resultado);
 		model.addAttribute("productos", productos);
 		return "guitarras";
+	}
+	
+	@RequestMapping("/bajos")
+	public String showBajos(Model model, @ModelAttribute("resultado") String resultado) {
+		Productos producto = new Productos();
+		List<Productos> productos = productosService.buscarBass();
+		model.addAttribute("producto", producto);
+		model.addAttribute("resultado", resultado);
+		model.addAttribute("productos", productos);
+		return "bajos";
 	}
 	
 	

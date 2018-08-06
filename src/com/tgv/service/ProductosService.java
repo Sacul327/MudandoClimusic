@@ -22,5 +22,8 @@ public class ProductosService {
 	public List<Productos> buscarGuitar(){
 		return productosDao.buscarGuitar();
 	}
+	public List<Productos> buscarBass(){
+		return productosDao.buscarBass();
+	}
 	
 }

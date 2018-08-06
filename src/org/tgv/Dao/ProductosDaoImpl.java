@@ -65,5 +65,18 @@ public class ProductosDaoImpl implements ProductosDao {
 	        return prod;
 		
 	}
+	@Override
+	public List<Productos> buscarBass() {
+			String bajo="bass";
+			
+			List<Productos> prod= new ArrayList();
+			Criteria cri = getSession().createCriteria(Productos.class);
+	        // Propiedad de la clase, no de la BD en el metodo de eq de Restrictions
+	        // Colocamos el nombre del atributo de la clase recordar esto
+	        cri.add(Restrictions.eq("tipo", bajo));
+	        prod= cri.list();
+	        return prod;
+		
+	}
 
 }
