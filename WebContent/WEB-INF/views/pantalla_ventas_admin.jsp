@@ -25,7 +25,7 @@
 	<div class="collapse navbar-collapse" id="navbarColor01">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item disabled"><a class="nav-link" href='<c:url value="/pantallaVentasAdmin"/>'>ventas</a></li>
-			<li class="nav-item"><a class="nav-link" href='<c:url value="/Usuarios"/>'>Administrar
+			<li class="nav-item"><a class="nav-link" href='<c:url value="/usuarios"/>'>Administrar
 					Usuarios</a></li>
 		</ul>
 	</div>
