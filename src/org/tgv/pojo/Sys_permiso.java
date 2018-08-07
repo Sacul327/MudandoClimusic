@@ -1,9 +1,12 @@
 package org.tgv.pojo;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +18,23 @@ public class Sys_permiso {
 	private int id_permiso;
 	private String permiso;
 	
+	
+	@OneToMany(mappedBy="sysPermiso")
+	private Set<Empleado> empleado;
+	
+	
+	
+	public Sys_permiso(int id_permiso, String permiso, Set<Empleado> empleado) {
+		this.id_permiso = id_permiso;
+		this.permiso = permiso;
+		this.empleado = empleado;
+	}
+	public Set<Empleado> getEmpleado() {
+		return empleado;
+	}
+	public void setEmpleado(Set<Empleado> empleado) {
+		this.empleado = empleado;
+	}
 	public int getId_permiso() {
 		return id_permiso;
 	}

@@ -39,7 +39,7 @@ public class LoginController {
 				if(empleadoService.comprueboAdmin(empleadoForm.getEmail())){
 					return "redirect:/usuarios";
 				}else {
-					return "redirect:/springLogError";
+					return "redirect:/usuarios";
 				}
 				
 			}else {

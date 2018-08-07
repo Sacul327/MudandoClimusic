@@ -74,10 +74,13 @@ public class EmpleadoDaoImpl implements EmpleadoDao {
 		Empleado emp = new Empleado();
 		boolean existe=false;
 		emp=buscoUsuario(email);
-		System.out.println("ESTOY EN COMPRUEBO ADMIN GETPERMISO"+emp.getPermiso());
-		if(emp.getPermiso()==1) {
-        	existe = true;
-        }
+		System.out.println("ESTOY EN COMPRUEBO ADMIN GETPERMISO"+emp.getSysPermiso().getId_permiso());
+//		if(emp.getFk_ermiso()==1) {
+//        	existe = true;
+//        }}
+		if(emp.getSysPermiso().getId_permiso()==1) {
+			existe=true;
+		}
 		return existe;
 	}
 	

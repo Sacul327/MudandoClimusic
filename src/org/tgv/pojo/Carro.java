@@ -4,44 +4,73 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="productos")
+@Table(name="carro")
 public class Carro {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_factura;
+	private int id_carro;
+//	
+//	private int id_instrumento;
 	
-	private int id_instrumento;
+	@OneToOne
+	@JoinColumn(name="id_instrumento")
+	private Productos productos;
 	
-	public int getId_factura() {
-		return id_factura;
+	@OneToOne
+	@JoinColumn(name="id_factura")
+	private Factura_base facturaBase;
+	
+	public Productos getProductos() {
+		return productos;
 	}
 
-	public void setId_factura(int id_factura) {
-		this.id_factura = id_factura;
+	public void setProductos(Productos productos) {
+		this.productos = productos;
 	}
 
-	public int getId_instrumento() {
-		return id_instrumento;
+	public Factura_base getFacturaBase() {
+		return facturaBase;
 	}
 
-	public void setId_instrumento(int id_instrumento) {
-		this.id_instrumento = id_instrumento;
+	public void setFacturaBase(Factura_base facturaBase) {
+		this.facturaBase = facturaBase;
 	}
+
 
 	
+	
 
-	public Carro(int id_factura, int id_instrumento, int cantidad) {
-		this.id_factura = id_factura;
-		this.id_instrumento = id_instrumento;
+
+
+	
+	public Carro(int id_carro, Productos productos, Factura_base facturaBase) {
+		this.id_carro = id_carro;
+		this.productos = productos;
+		this.facturaBase = facturaBase;
+	}
+
+	public int getId_carro() {
+		return id_carro;
+	}
+
+	public void setId_carro(int id_carro) {
+		this.id_carro = id_carro;
 	}
 
 	public Carro() {
 
 	}
+
+
+
+
 	
 	
 

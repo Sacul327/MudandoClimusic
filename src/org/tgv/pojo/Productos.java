@@ -1,9 +1,15 @@
 package org.tgv.pojo;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +22,7 @@ public class Productos {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_instrumento;
 	private int stock;
-	private int proveedor_id;	
+//	private int proveedor_id;	
 	private float precio;
 	private String marca;
 	private String modelo;
@@ -25,21 +31,38 @@ public class Productos {
 	private String color;
 	private String img;
 	
+	@ManyToOne
+	@JoinColumn(name="proveedor_id")
+	private Proveedor proveedor;
+	
+	@OneToMany(mappedBy="productos")
+	private Set<Carro> carro;
 	
 	
-	
+	public Proveedor getProveedor() {
+		return proveedor;
+	}
+	public void setProveedor(Proveedor proveedor) {
+		this.proveedor = proveedor;
+	}
+	public Set<Carro> getCarro() {
+		return carro;
+	}
+	public void setCarro(Set<Carro> carro) {
+		this.carro = carro;
+	}
 	public String getImg() {
 		return img;
 	}
 	public void setImg(String img) {
 		this.img = img;
 	}
-	public int getProveedor_id() {
-		return proveedor_id;
-	}
-	public void setProveedor_id(int proveedor_id) {
-		this.proveedor_id = proveedor_id;
-	}
+//	public int getProveedor_id() {
+//		return proveedor_id;
+//	}
+//	public void setProveedor_id(int proveedor_id) {
+//		this.proveedor_id = proveedor_id;
+//	}
 	public int getStock() {
 		return stock;
 	}
@@ -91,25 +114,41 @@ public class Productos {
 	
 	
 	
-	public Productos(int id_instrumento, int stock, int proveedor_id, float precio, String marca, String modelo,
-			String tipo, String tipo_detalle, String color, String img) {
-		this.id_instrumento = id_instrumento;
-		this.stock = stock;
-		this.proveedor_id = proveedor_id;
-		this.precio = precio;
-		this.marca = marca;
-		this.modelo = modelo;
-		this.tipo = tipo;
-		this.tipo_detalle = tipo_detalle;
-		this.color = color;
-		this.img = img;
-	}
+//	public Productos(int id_instrumento, int stock, int proveedor_id, float precio, String marca, String modelo,
+//			String tipo, String tipo_detalle, String color, String img) {
+//		this.id_instrumento = id_instrumento;
+//		this.stock = stock;
+//		this.proveedor_id = proveedor_id;
+//		this.precio = precio;
+//		this.marca = marca;
+//		this.modelo = modelo;
+//		this.tipo = tipo;
+//		this.tipo_detalle = tipo_detalle;
+//		this.color = color;
+//		this.img = img;
+//	}
+	
 	public Productos() {
 		
 	}
+	public Productos(int id_instrumento, int stock, /*int proveedor_id,*/ float precio, String marca, String modelo,
+		String tipo, String tipo_detalle, String color, String img, Proveedor proveedor, Set<Carro> carro) {
+	this.id_instrumento = id_instrumento;
+	this.stock = stock;
+//	this.proveedor_id = proveedor_id;
+	this.precio = precio;
+	this.marca = marca;
+	this.modelo = modelo;
+	this.tipo = tipo;
+	this.tipo_detalle = tipo_detalle;
+	this.color = color;
+	this.img = img;
+	this.proveedor = proveedor;
+	this.carro = carro;
+}
 	@Override
 	public String toString() {
-		return "Productos [id_instrumento=" + id_instrumento + ", stock=" + stock + ", proveedor_id=" + proveedor_id
+		return "Productos [id_instrumento=" + id_instrumento + ", stock=" + stock /*+ ", proveedor_id=" + proveedor_id*/
 				+ ", precio=" + precio + ", marca=" + marca + ", modelo=" + modelo + ", tipo=" + tipo
 				+ ", tipo_detalle=" + tipo_detalle + ", color=" + color + ", img=" + img + "]";
 	}

@@ -1,9 +1,12 @@
 package org.tgv.pojo;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +19,16 @@ public class Proveedor {
 	
 	private String nombre_empresa;
 	
+	@OneToMany(mappedBy="proveedor")
+	private Set<Productos> productos;
+	
+	
+	public Set<Productos> getProductos() {
+		return productos;
+	}
+	public void setProductos(Set<Productos> productos) {
+		this.productos = productos;
+	}
 	public int getId_proveedor() {
 		return id_proveedor;
 	}
@@ -28,10 +41,13 @@ public class Proveedor {
 	public void setNombre_empresa(String nombre_empresa) {
 		this.nombre_empresa = nombre_empresa;
 	}
-	public Proveedor(int id_proveedor, String nombre_empresa) {
-		
+	
+	
+	
+	public Proveedor(int id_proveedor, String nombre_empresa, Set<Productos> productos) {
 		this.id_proveedor = id_proveedor;
 		this.nombre_empresa = nombre_empresa;
+		this.productos = productos;
 	}
 	public Proveedor() {
 		
