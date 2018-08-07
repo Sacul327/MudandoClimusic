@@ -88,7 +88,7 @@
             <hr class="mb-4">
             <h4 class="mb-3">Privilegio de usuario</h4>
             <div class="form-row col-md-6"> 
-					<label>Privilegio (Ingrese 1 o 2):</label> <sf:input cssClass="form-control" path="permiso" value="2" />
+					<label>Privilegio (Ingrese 1 o 2):</label> <sf:input cssClass="form-control" path="sysPermiso.id_permiso" value="2" />
 				</div>
 <!--             <div class="d-block my-3"> -->
 <!--               <div class="custom-control custom-radio"> -->
