@@ -10,7 +10,6 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import org.tgv.pojo.Empleado;
 import org.tgv.pojo.Productos;
 
 
@@ -77,6 +76,9 @@ public class ProductosDaoImpl implements ProductosDao {
 	        prod= cri.list();
 	        return prod;
 		
+	}
+	public Productos buscarXId(int id) {
+		return getSession().get(Productos.class, id);
 	}
 
 }

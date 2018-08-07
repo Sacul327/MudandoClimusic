@@ -73,16 +73,13 @@
 								</tr>
 							</thead>
 							<tbody>
+							<c:forEach items="${carros}" var="carro">
 								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-
-
+									<td><c:out value="${carro.productos}"/></td>
+									<td><c:out value="${carro.facturaBase}"/></td>
+									<td><c:out value="${carro.id_carro}"/></td>
 								</tr>
+							</c:forEach>
 							</tbody>
 						</table>
 					</form>
@@ -128,7 +125,7 @@
 									<td><c:out value="${producto.stock}"/></td>
 									<td><c:out value="${producto.color}"/></td>
 									<td><c:out value="${producto.tipo}"/></td>
-									<td><c:out value="${producto.tipo_detalle}"/></td>
+									<td><a href="<c:url value='/carro/${producto.id_instrumento}/save'/>">add to Cart</a></td>
 								</tr>
 								</c:forEach>
 								</tbody>

@@ -13,4 +13,5 @@ public interface ProductosDao {
 	public void actualizar(Productos productos);
 	public List<Productos> buscarGuitar();
 	public List<Productos> buscarBass();
+	public Productos buscarXId(int id); 
 }

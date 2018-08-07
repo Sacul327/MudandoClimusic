@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.tgv.pojo.Carro;
+import org.tgv.pojo.Factura_base;
 import org.tgv.pojo.Productos;
 
 import com.tgv.service.CarroService;
@@ -24,7 +27,7 @@ public class PantallaVentasController {
 	
 	
 	@RequestMapping("/pantallaVentasAdmin")
-	public String Productos(Model model, @ModelAttribute("resultado") String resultado) {
+	public String productos(Model model, @ModelAttribute("resultado") String resultado) {
 		//producto LISTA
 		List<Productos> productos = productosService.buscarTodos();
 		Productos producto = new Productos();
@@ -37,9 +40,25 @@ public class PantallaVentasController {
 		Carro carro = new Carro();
 		model.addAttribute("carro", carro);
 		model.addAttribute("resultado", resultado);
-		model.addAttribute("Carros", carros);
+		model.addAttribute("carros", carros);
 		
 		return "pantalla_ventas_admin";
+	}
+	
+	@RequestMapping(value="/carro/{numprod}/save",method=RequestMethod.GET)
+	public String carroMostrar(Model model,@PathVariable("numprod") int id_instrumento) {
+		System.out.println("Estoy EN CARRO SAVE!");
+		Carro carro=new Carro();
+		Factura_base facbas=new Factura_base();
+		facbas.setId_factura(1);
+		Productos productos=productosService.buscarXId(id_instrumento);
+		facbas.setId_factura(1);
+		carro.setFacturaBase(facbas);
+		carro.setProductos(productos);
+		carroService.save(carro);
+		System.out.println(carro.toString());
+		
+		return "redirect:/pantallaVentasAdmin";
 	}
 
 }

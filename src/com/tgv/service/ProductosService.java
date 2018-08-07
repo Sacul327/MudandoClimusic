@@ -25,5 +25,8 @@ public class ProductosService {
 	public List<Productos> buscarBass(){
 		return productosDao.buscarBass();
 	}
+	public Productos buscarXId(int id){
+		return productosDao.buscarXId(id);
+	}
 	
 }

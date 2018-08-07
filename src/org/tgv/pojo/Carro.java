@@ -16,7 +16,7 @@ public class Carro {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_carro;
-//	
+	
 //	private int id_instrumento;
 	
 	@OneToOne
