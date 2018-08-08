@@ -12,6 +12,9 @@
 </head>
 <body>
 	<div class="container">
+	<br>
+	<a href='<c:url value="/springLog"/>'><img alt="" src='<c:url value="/resources/images/ico_left_arrow_53824.png"/>'  style="max-width: 2%;"><span class="text-muted">Volver</span></a>
+	<hr class="mb-12">
       <div class="py-5 text-center">
       	<h1>Climusic</h1>
 <%--         <img class="d-block mx-auto mb-4" src='<c:url value="/resources/images/ClimusiclogoCortado.jpg"/>' alt="" width="72" height="72"> --%>
@@ -117,6 +120,7 @@
 <!--         </ul> -->
 <!--       </footer> -->
     </div>
+    <br>
 	<script src='<c:url value="/resources/jquery/jquery.min.js"/>'></script>
     <script src='<c:url value="/resources/js/bootstrap.bundle.min.js"/>'></script>
 </body>

@@ -90,10 +90,11 @@
 <!-- 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur -->
 <!-- 									adipisicing elit. Amet numquam aspernatur!</p> -->
 							</div>
-<!-- 							<div class="card-footer"> -->
+							<div class="card-footer">
+							<a href="<c:url value='select/${productos.id_instrumento}/item'/>"><button type="button" class="btn btn-sm btn-outline-secondary" >View more</button></a>
 <!-- 								<small class="text-muted">&#9733; &#9733; &#9733; -->
 <!-- 									&#9733; &#9734;</small> -->
-<!-- 							</div> -->
+							</div>
 						</div>
 								
 					</div>

@@ -69,15 +69,19 @@
 									<th>Modelo</th>
 									<th>Precio</th>
 									<th>Color</th>
-									<th>Tipo</th>
+									
 								</tr>
 							</thead>
 							<tbody>
 							<c:forEach items="${carros}" var="carro">
 								<tr>
-									<td><c:out value="${carro.productos}"/></td>
-									<td><c:out value="${carro.facturaBase}"/></td>
 									<td><c:out value="${carro.id_carro}"/></td>
+<%-- 									<td><c:out value="${carro.facturaBase}"/></td> --%>
+									<td><c:out value="${carro.productos.marca}"/></td>
+									<td><c:out value="${carro.productos.modelo}"/></td>
+									<td><c:out value="${carro.productos.precio}"/></td>
+									<td><c:out value="${carro.productos.color}"/></td>
+									
 								</tr>
 							</c:forEach>
 							</tbody>
@@ -100,8 +104,9 @@
 
 				</div>
 <!-- 				Vert Layout derecha -->
-				<div class="col-sm-5">
-					<Form class="form-horizontal" id="tablapadre">
+				<div class="col-sm-7 listproducto">
+					
+					<Form class="form-horizontal" >
 						<table class="table table-striped " id="tabla">
 							<thead>
 								<tr>
@@ -131,23 +136,11 @@
 								</tbody>
 						</table>
 					</form>
+					</div>
 <!-- 					navegador para la lista -->
 
 <!-- 					Lista de productos Stockdentro del nav -->
 
-<!-- 					Agregar al carro codigo -->
-					<form class="form-horizontal" action="ServletCart"
-						method="post">
-					<div id="addcart" class="input-group mb-3" >
-						<div class="input-group-prepend">
-							<button class="btn btn-outline-secondary" type="submit">Add
-								to cart</button>
-						</div>
-						<input name="NroProducto" type="text" class="form-control"
-							placeholder="N° de producto" aria-label=""
-							aria-describedby="basic-addon1">
-					</div>
-					</form>
 <!-- 					Descripcion de los productos -->
 					<div class="card" style="width: 18rem;">
 						<div class="card-body">
