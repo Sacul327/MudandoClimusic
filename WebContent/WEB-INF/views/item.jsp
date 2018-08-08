@@ -87,31 +87,29 @@
       <h3 class="my-4">Related Projects</h3>
 
       <div class="row">
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-        </div>
-
+		<c:forEach items="${listFiltrada}" var="listFiltrada">
+        <div class="col-lg-4 col-md-6 mb-4">
+					
+						<div class="card h-100">
+							<a href="#"><img class="card-img-top"
+								src='<c:out value="/${listFiltrada.img}"/>' alt=""></a>
+							<div class="card-body">
+								<h4 class="card-title">
+									<h4><c:out value="${listFiltrada.marca}"/> <c:out value="${listFiltrada.modelo}"/></h4>
+								</h4>
+								<h5>$<c:out value="${listFiltrada.precio}"/></h5>
+<!-- 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur -->
+<!-- 									adipisicing elit. Amet numquam aspernatur!</p> -->
+							</div>
+							<div class="card-footer">
+							<a href="<c:url value='select/${listFiltrada.id_instrumento}/item'/>"><button type="button" class="btn btn-sm btn-outline-secondary" >View more</button></a>
+<!-- 								<small class="text-muted">&#9733; &#9733; &#9733; -->
+<!-- 									&#9733; &#9734;</small> -->
+							</div>
+						</div>
+								
+					</div>
+		</c:forEach>
       </div>
       <!-- /.row -->
 

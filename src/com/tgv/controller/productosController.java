@@ -67,14 +67,14 @@ public class productosController {
 		return "bajos";
 	}
 	
-	@RequestMapping(value="select/{id}/item", method=RequestMethod.GET)
-	public String mostrarItem(Model model, @PathVariable("id") int id) {
-		
-		Productos producto = productosService.buscarXId(id);
-		
-		model.addAttribute("producto", producto);
-		//System.out.println(model.);
-		return "item";
-	}
+//	@RequestMapping(value="select/{id}/item", method=RequestMethod.GET)
+//	public String mostrarItem(Model model, @PathVariable("id") int id) {
+//		
+//		Productos producto = productosService.buscarXId(id);
+//		
+//		model.addAttribute("producto", producto);
+//		//System.out.println(model.);
+//		return "item";
+//	}
 	
 }
