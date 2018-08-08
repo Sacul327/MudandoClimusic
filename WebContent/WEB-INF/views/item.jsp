@@ -92,7 +92,7 @@
 					
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src='<c:out value="/${listFiltrada.img}"/>' alt=""></a>
+								src='<c:out value="/SpringHibernateWeb/${listFiltrada.img}"/>' alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<h4><c:out value="${listFiltrada.marca}"/> <c:out value="${listFiltrada.modelo}"/></h4>
