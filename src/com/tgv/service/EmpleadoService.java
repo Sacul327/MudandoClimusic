@@ -52,6 +52,9 @@ public class EmpleadoService {
 		Empleado empleado = empleadoDao.buscarXId(idAd);
 		empleadoDao.borrar(empleado);
 	}
+	public Empleado buscoEmail(String email) {
+		return empleadoDao.buscoUsuario(email);
+	}
 //	
 //	public void buscarXEmail(String email) {
 //		empleadoDao.buscarXEmail(email);

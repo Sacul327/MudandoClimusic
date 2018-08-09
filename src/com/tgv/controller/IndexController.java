@@ -18,7 +18,7 @@ import com.tgv.service.EmpleadoService;
  *
  */
 @Controller
-@SessionAttributes("resultado")
+//@SessionAttributes("empleado")
 public class IndexController {
 	
 	@Autowired

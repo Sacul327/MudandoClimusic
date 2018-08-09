@@ -50,7 +50,7 @@ public class EmpleadoDaoImpl implements EmpleadoDao {
         // Colocamos el nombre del atributo de la clase recordar esto
         cri.add(Restrictions.eq("email", email));
         emp=(Empleado) cri.uniqueResult();
-        
+        System.out.println(emp);
         return emp;
 	}
 //	
@@ -58,6 +58,7 @@ public class EmpleadoDaoImpl implements EmpleadoDao {
 		Empleado emp = new Empleado();
 		boolean existe=false;
 		emp=buscoUsuario(email);
+		System.out.println(emp);
 		if(emp==null) {
 			existe=false;
 		}else {
@@ -97,7 +98,7 @@ public class EmpleadoDaoImpl implements EmpleadoDao {
 	public Empleado buscarXId(int id) {
 		return getSession().get(Empleado.class, id);
 	}
-
+	
 
 	@Override
 	public void borrar(Empleado empleado) {

@@ -17,7 +17,7 @@ import org.tgv.pojo.Empleado;
 import com.tgv.service.EmpleadoService;
 
 @Controller
-@SessionAttributes("empleado")
+@SessionAttributes("empleadoSession")
 public class LoginController {
 	
 //	@Autowired
@@ -34,10 +34,12 @@ public class LoginController {
 	@RequestMapping(value="/empleado/ingreso",method=RequestMethod.POST)
 	public String handlAdmin(@ModelAttribute("empleado") Empleado empleadoForm, Model model/*,RedirectAttributes ra
 			,@RequestParam("fuera") String fuera*/) {
-		model.addAttribute("empleadoForm", empleadoForm);
+//		model.addAttribute("empleadoForm", empleadoForm);
 		if(empleadoForm.getEmail()!=null) {
 			if(empleadoService.datosCorrectos(empleadoForm.getEmail(), empleadoForm.getPassword())){
-					model.addAttribute("empleado", empleadoForm);
+				Empleado empleado= empleadoService.buscoEmail(empleadoForm.getEmail());
+//				System.out.println(emp);
+				model.addAttribute("empleadoSession", empleado);
 				if(empleadoService.comprueboAdmin(empleadoForm.getEmail())){
 					return "redirect:/usuarios";
 				}else {

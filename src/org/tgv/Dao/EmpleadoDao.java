@@ -17,5 +17,7 @@ public interface EmpleadoDao {
 //	public List<Empleado> buscarXNombre(String nombre);
 	public void actualizar(Empleado empleado);
 	public void borrar(Empleado empleado);
+	
+	
 
 }
