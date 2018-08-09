@@ -77,7 +77,7 @@
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark fixed-bottom">
+    <footer class="py-4 bg-dark fixed-bottom">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Climusic 2018</p>
         <img src='<c:url value="/resources/images/TGVlogo2.png"/>' class="img-responsive imagen" style="width:5%" alt="Image">

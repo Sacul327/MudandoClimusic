@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+      margin-bottom: 0;
+    }
+    /* Add a gray background color and some padding to the footer */
+footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+#botonquitar{
+    	margin-top:5px;
+    }
+    
+#addcart{
+    	display: inline;
+    }
+    
+#adduser{
+    	position: relative;
+    	top: 15px;
+    }
+    
+#tabla{
+	overflow: scroll;
+}
+.navbar-nav>li>a {
+    line-height: 50px;
+    padding-left: 13px;
+}
+.centrotexto{
+	text-align: center !important;
+}

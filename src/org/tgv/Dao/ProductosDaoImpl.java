@@ -27,30 +27,30 @@ public class ProductosDaoImpl implements ProductosDao {
 		return sessionFactory.getCurrentSession();
 	}
 
-	@Override
+	
 	public void save(Productos productos) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public List<Productos> buscarTodos() {
 		return getSession().createCriteria(Productos.class).list();
 	}
 
-	@Override
+	
 	public Productos buscoProducto(String producto) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public void actualizar(Productos productos) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public List<Productos> buscarGuitar() {
 			String guitarra="guitar";
 			
@@ -64,7 +64,7 @@ public class ProductosDaoImpl implements ProductosDao {
 	        return prod;
 		
 	}
-	@Override
+	
 	public List<Productos> buscarBass() {
 			String bajo="bass";
 			

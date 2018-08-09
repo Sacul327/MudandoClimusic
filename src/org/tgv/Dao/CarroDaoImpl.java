@@ -24,22 +24,22 @@ public class CarroDaoImpl implements CarroDao{
 		return sessionFactory.getCurrentSession();
 	}
 	
-	@Override
+	
 	public void save(Carro carro) {
 		getSession().save(carro);
 	}
 
-	@Override
+	
 	public List<Carro> buscarTodos() {
 		return getSession().createCriteria(Carro.class).list();
 	}
 	
-	@Override
+	
 	public void delete(Carro carro) {
 		getSession().delete(carro);
 	}
 	
-	@Override
+	
 	public Carro buscarXId(int id) {
 		return getSession().get(Carro.class, id);
 	}

@@ -30,9 +30,18 @@ public class itemController {
 		Random rand = new Random();
 		List<Productos> listFiltrada = new ArrayList();
 		
+//		ArrayList<Integer> numbers = new ArrayList<Integer>();   
+//		Random randomGenerator = new Random();
+//		while (numbers.size() < 4) {
+//
+//		    int random = randomGenerator .nextInt(productos.size()-1) + 1;
+//		    if (!numbers.contains(random)) {
+//		        listFiltrada.add(productos.get(random));
+//		    }
+//		}
 		
 		for(int i=1;i<4;i++) {
-			int  n = rand.nextInt(productos.size()) + 1;
+			int  n = rand.nextInt(productos.size()-1) + 1;
 			listFiltrada.add(productos.get(n));
 		}
 		model.addAttribute("listFiltrada", listFiltrada);
