@@ -94,13 +94,13 @@ public class EmpleadoDaoImpl implements EmpleadoDao {
 		// TODO Auto-generated method stub
 		getSession().save(empleado);
 	}
-	@Override
+	
 	public Empleado buscarXId(int id) {
 		return getSession().get(Empleado.class, id);
 	}
 	
 
-	@Override
+	
 	public void borrar(Empleado empleado) {
 		getSession().delete(empleado);
 	}
