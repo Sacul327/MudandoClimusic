@@ -14,6 +14,7 @@
 	<div class="container">
 	<br>
 	<a href='<c:url value="/springLog"/>'><img alt="" src='<c:url value="/resources/images/ico_left_arrow_53824.png"/>'  style="max-width: 2%;"><span class="text-muted">Volver</span></a>
+	<a class="align-items-right" style="padding-left: 87%;" href='<c:url value="/Ventas"/>'> ir a ventas</a>
 	<hr class="mb-12">
       <div class="py-5 text-center">
       	<h1>Climusic</h1>

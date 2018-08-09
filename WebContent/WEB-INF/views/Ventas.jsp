@@ -8,8 +8,8 @@
 	<!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-	<link href="<c:url value="/resources/css/shop-homepage.css" />" rel="stylesheet">
+<!--     Custom styles for this template -->
+<%-- 	<link href="<c:url value="/resources/css/shop-homepage.css" />" rel="stylesheet"> --%>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 		<div class="container">
 			<a class="navbar-brand" href='<c:url value="/"/>'><img
 				src='<c:url value="/resources/images/ClimusiclogoCortado.jpg"/>' class="img-responsive imagen"
-				style="width: 15%" alt="Image"></a>
+				style="width: 25%" alt="Image"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive"
 				aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +30,10 @@
 					</li>
 					<li class="nav-item"><a class="nav-link" href='<c:url value="/location"/>'>Encuentranos</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href='<c:url value="/springLog"/>'><span
-							class="glyphicon glyphicon-user"></span> Log In</a></li>
-					<li class="nav-item"><a class="nav-link" href=""><span
-							class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+					<li class="nav-item"><a class="nav-link" href='<c:url value="/logout"/>'><span
+							class="glyphicon glyphicon-user"></span> Log out</a></li>
+					<li class="nav-item"><a class="nav-link" href='<c:url value="/adduser"/>'><span
+							class="glyphicon glyphicon-shopping-cart"></span>user manager</a></li>
 				</ul>
 				
 			</div>

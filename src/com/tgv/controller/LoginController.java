@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.tgv.pojo.Empleado;
 //import com.Climusic.Modelos.Productos;
@@ -41,7 +42,7 @@ public class LoginController {
 //				System.out.println(emp);
 				model.addAttribute("empleadoSession", empleado);
 				if(empleadoService.comprueboAdmin(empleadoForm.getEmail())){
-					return "redirect:/usuarios";
+					return "redirect:/adduser";
 				}else {
 					return "redirect:/usuarios";
 				}
@@ -51,5 +52,11 @@ public class LoginController {
 			}
 		}
 		return "redirect:/springLogError"; //Redirect/: envia parametros a otro metodo
+	}
+	
+	@RequestMapping("/logout")
+	public String logout(SessionStatus sessionStatus) {
+		sessionStatus.setComplete();
+		return "index";
 	}
 }
