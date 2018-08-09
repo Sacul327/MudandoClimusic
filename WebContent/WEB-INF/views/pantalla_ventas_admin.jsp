@@ -69,7 +69,7 @@
 									<th>Modelo</th>
 									<th>Precio</th>
 									<th>Color</th>
-									
+									<th>Borrar</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -81,7 +81,7 @@
 									<td><c:out value="${carro.productos.modelo}"/></td>
 									<td><c:out value="${carro.productos.precio}"/></td>
 									<td><c:out value="${carro.productos.color}"/></td>
-									
+									<td><a href="<c:url value='/carro/${carro.id_carro}/delete'/>">drop</a></td>
 								</tr>
 							</c:forEach>
 							</tbody>

@@ -21,6 +21,7 @@ public class itemController {
 	@Autowired
 	private ProductosService productosService;
 	
+	
 	@RequestMapping(value="select/{id}/item", method=RequestMethod.GET)
 	public String mostrarItem(Model model, @PathVariable("id") int id) {
 		
@@ -30,7 +31,7 @@ public class itemController {
 		List<Productos> listFiltrada = new ArrayList();
 		
 		
-		for(int i=1;i<5;i++) {
+		for(int i=1;i<4;i++) {
 			int  n = rand.nextInt(productos.size()) + 1;
 			listFiltrada.add(productos.get(n));
 		}

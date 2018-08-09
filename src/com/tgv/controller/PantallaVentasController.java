@@ -26,7 +26,7 @@ public class PantallaVentasController {
 	private CarroService carroService;
 	
 	
-	@RequestMapping("/pantallaVentasAdmin")
+	@RequestMapping("/Ventas")
 	public String productos(Model model, @ModelAttribute("resultado") String resultado) {
 		//producto LISTA
 		List<Productos> productos = productosService.buscarTodos();
@@ -42,7 +42,8 @@ public class PantallaVentasController {
 		model.addAttribute("resultado", resultado);
 		model.addAttribute("carros", carros);
 		
-		return "pantalla_ventas_admin";
+//		return "pantallaVentasAdmin";
+		return "Ventas";
 	}
 	
 	@RequestMapping(value="/carro/{numprod}/save",method=RequestMethod.GET)
@@ -56,9 +57,18 @@ public class PantallaVentasController {
 		carro.setFacturaBase(facbas);
 		carro.setProductos(productos);
 		carroService.save(carro);
-		System.out.println(carro.toString());
 		
-		return "redirect:/pantallaVentasAdmin";
+//		return "redirect:/pantallaVentasAdmin";
+		return "redirect:/Ventas";
+	}
+	@RequestMapping(value="/carro/{numcarro}/delete",method=RequestMethod.GET)
+	public String carroBorrar(Model model,@PathVariable("numcarro") int id_carro) {
+		
+		Carro carro= carroService.buscarXId(id_carro);
+		carroService.delete(carro);
+		
+		return "redirect:/Ventas";
+//		return "redirect:/pantallaVentasAdmin";
 	}
 
 }

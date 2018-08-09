@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.tgv.pojo.Empleado;
 //import com.Climusic.Modelos.Productos;
@@ -16,6 +17,7 @@ import org.tgv.pojo.Empleado;
 import com.tgv.service.EmpleadoService;
 
 @Controller
+@SessionAttributes("empleado")
 public class LoginController {
 	
 //	@Autowired
@@ -35,7 +37,7 @@ public class LoginController {
 		model.addAttribute("empleadoForm", empleadoForm);
 		if(empleadoForm.getEmail()!=null) {
 			if(empleadoService.datosCorrectos(empleadoForm.getEmail(), empleadoForm.getPassword())){
-					System.out.println("Estoy dentro del primer if ChECK USER");
+					model.addAttribute("empleado", empleadoForm);
 				if(empleadoService.comprueboAdmin(empleadoForm.getEmail())){
 					return "redirect:/usuarios";
 				}else {
