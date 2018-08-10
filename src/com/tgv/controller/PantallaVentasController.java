@@ -2,6 +2,8 @@ package com.tgv.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.tgv.pojo.Carro;
+import org.tgv.pojo.Empleado;
 import org.tgv.pojo.Factura_base;
 import org.tgv.pojo.Productos;
 
@@ -27,7 +30,7 @@ public class PantallaVentasController {
 	
 	
 	@RequestMapping("/Ventas")
-	public String productos(Model model, @ModelAttribute("resultado") String resultado) {
+	public String productos(Model model, @ModelAttribute("resultado") String resultado,HttpSession session) {
 		//producto LISTA
 		List<Productos> productos = productosService.buscarTodos();
 		Productos producto = new Productos();
@@ -42,8 +45,16 @@ public class PantallaVentasController {
 		model.addAttribute("resultado", resultado);
 		model.addAttribute("carros", carros);
 		
+		Empleado emp= (Empleado) session.getAttribute("empleadoSession");
+		String ventas;
+		if(emp.getSysPermiso().getId_permiso()==1) {
+			ventas="Ventas";
+		}else {
+			ventas="Ventas2";
+		}
+		
 //		return "pantallaVentasAdmin";
-		return "Ventas";
+		return ventas;
 	}
 	
 	@RequestMapping(value="/carro/{numprod}/save",method=RequestMethod.GET)
