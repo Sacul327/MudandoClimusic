@@ -44,7 +44,7 @@ public class LoginController {
 				if(empleadoService.comprueboAdmin(empleadoForm.getEmail())){
 					return "redirect:/adduser";
 				}else {
-					return "redirect:/usuarios";
+					return "redirect:/Ventas";
 				}
 				
 			}else {
