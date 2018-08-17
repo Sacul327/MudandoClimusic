@@ -81,8 +81,8 @@
     <div class="container">
 
       <!-- Portfolio Item Heading -->
-      <h1 class="my-4">Page Heading
-        <small>Secondary Text</small>
+      <h1 class="my-4"><c:out value="${producto.marca}"/>
+        <small><c:out value="${producto.modelo}"/></small>
       </h1>
 
       <!-- Portfolio Item Row -->
@@ -95,9 +95,9 @@
         </div>
 
         <div class="col-md-4">
-          <h3 class="my-3">Project Description</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-          <h3 class="my-3">Project Details</h3>
+<!--           <h3 class="my-3">Project Description</h3> -->
+<!--           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p> -->
+          <h3 class="my-3">Detalles del producto:</h3>
           <ul>
             <li><c:out value="${producto.marca}"/></li>
             <li><c:out value="${producto.modelo}"/></li>
